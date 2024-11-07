@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone</title>
+    <style>
+        body{
+            background-color:  #99ccff;
+        }
+        .container {
+            width: 300px;
+            background-color:  #3399ff;
+            margin: 20px auto;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .btn {
+            font-size: 15px;
+            font-family: cursive;
+            background-color:darkgreen;
+            border-radius: 10px;
+            width: 100px;
+            height: 40px;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .heading {
+            text-align: center;
+            padding-top: 0px;
+            color:black;
+            font-size: 40px;
+            font-family: cursive;
+        }
+
+        #smartphone{
+            width: 70%;
+            margin: 10px 50px;
+            border-radius: 30px;
+            border: 1px solid black;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        
+
+        .btn:hover {
+            box-shadow: 1px 1px 2px 3px  #0059b3;
+            transition: 0.5s;
+        }
+
+       
+    </style>
+</head>
+<body id="body">
+    <div class="container" id="box">
+        <h1 class="heading" id="title">smartphone</h1>
+        <img src="smartphone (1).png" class="img" id="smartphone">
+        <div class="btn-container">
+            <button class="btn" id="button" onclick="smartphone('lock')">lock</button>
+            <button class="btn" id="button" onclick="smartphone('unlock')">Unlock</button></div>
+        <div class="btn-container">
+            <button class="btn" id="button" onclick="smartphone('touch')">touch</button>
+        </div>
+    </div>
+    <script>
+        function smartphone(name){
+            const imageElement = document.getElementById("smartphone");
+            const containerElement = document.getElementById("box");
+            const headingElement = document.getElementById("title");
+            const bodyElement = document.getElementById("body");
+
+            
+            if(name=='lock'){
+                imageElement.src = "smartphone.png";
+                containerElement.style.backgroundColor = " lightblue";
+                headingElement.innerText = "Lock";
+                bodyElement.style.backgroundColor = "  #ff0055";
+            }
+
+
+            else if(name=='unlock'){
+                imageElement.src = "mobile.png";
+                containerElement.style.backgroundColor = "grey";
+                headingElement.innerText = "Unlock";
+                bodyElement.style.backgroundColor = "pink";
+            }
+
+
+            else {
+                imageElement.src = "touch.png";
+                containerElement.style.backgroundColor = "aqua";
+                headingElement.innerText = "Touch";
+                bodyElement.style.backgroundColor = "lightyellow";
+            }
+        }    
+        </script>
+
+
+</body>
+</html>
